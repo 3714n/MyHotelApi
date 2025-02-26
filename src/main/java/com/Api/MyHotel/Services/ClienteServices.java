@@ -27,7 +27,7 @@ public class ClienteServices {
 		}
 		public ClienteModel updateById(ClienteModel request, Long id){
 			ClienteModel cliente = clienteRepository.findById(id).get();
-			
+
 			cliente.setNombre_cliente(request.getNombre_cliente());
 			cliente.setApellido_cliente(request.getApellido_cliente());
 			cliente.setTipo_id_cliente(request.getTipo_id_cliente());
