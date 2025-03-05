@@ -36,6 +36,7 @@ public class ClienteServices {
 			cliente.setCorreo_cliente(request.getCorreo_cliente());
 			cliente.setProfesion_cliente(request.getProfesion_cliente());
 			cliente.setNacionalidad_cliente(request.getNacionalidad_cliente());
+			cliente.setEdad_cliente(request.getEdad_cliente());
 			
 			return cliente;
 			

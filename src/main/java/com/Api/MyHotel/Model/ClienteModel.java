@@ -25,12 +25,16 @@ public class ClienteModel {
 		@Column
 		private String nacionalidad_cliente;
 		@Column
+		private String edad_cliente;
+		@Column
 		private String profesion_cliente;
+		
+		//getter y setter
 		public Long getId() {
 			return Id;
 		}
 		public void setId(Long id) {
-			Id = id;
+			this.Id = id;
 		}
 		public String getNombre_cliente() {
 			return nombre_cliente;
@@ -79,6 +83,12 @@ public class ClienteModel {
 		}
 		public void setProfesion_cliente(String profesion_cliente) {
 			this.profesion_cliente = profesion_cliente;
+		}
+		public String getEdad_cliente() {
+			return edad_cliente;
+		}
+		public void setEdad_cliente(String edad_cliente) {
+			this.edad_cliente = edad_cliente;
 		}
 		
 	
