@@ -2,6 +2,8 @@ package com.Api.MyHotel.Model;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.*;
 
 
@@ -15,6 +17,7 @@ public class PagoModel {
 		@Column
 		private Long monto_pago;
 		@Column
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 		private Date fecha_pago;
 		
 		

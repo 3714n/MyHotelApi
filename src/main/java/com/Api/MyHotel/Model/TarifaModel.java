@@ -2,6 +2,7 @@ package com.Api.MyHotel.Model;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.*;
 
@@ -14,8 +15,10 @@ public class TarifaModel {
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long idtarifa;
 		@Column
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 		private Date fecha_ini_tarifa;
 		@Column
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 		private Date fecha_out_tarifa;
 		@Column
 		private Long precio_tarifa;

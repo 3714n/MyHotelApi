@@ -2,6 +2,8 @@ package com.Api.MyHotel.Model;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +15,7 @@ public class HistorialModel {
 	@Column
 	private String cambio_historial;
 	@Column
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private Date fecha_historial;
 	
 	

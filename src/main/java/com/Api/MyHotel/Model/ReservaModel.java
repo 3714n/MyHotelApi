@@ -3,6 +3,8 @@ package com.Api.MyHotel.Model;
 import java.sql.Date;
 import java.sql.Time;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.*;
 
 
@@ -14,8 +16,10 @@ public class ReservaModel {
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long idreserva;
 		@Column
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 		private Date fecha_ini_reserva;
 		@Column
+		@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 		private Date fecha_out_reserva;
 		@Column
 		private Time Hora_in_reserva;
